@@ -1,2 +1,0 @@
-# RCWEB
-Capstone Project, Website
