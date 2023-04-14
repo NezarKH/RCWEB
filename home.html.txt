@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Home</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="research.html">Research Paper</a></li>
+        <li><a href="evidence.html">Supporting Evidence</a></li>
+        <li><a href="conclusion.html">Conclusion</a></li>
+        <li><a href="reflection.html">Reflective Essay</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+<!-- Home -->
+<section id="home">
+  <h1>Welcome to My Research Project</h1>
+  <p>Introduce your subject and point of view here.</p>
+</section>
+<!-- About -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>Provide background information about you as a researcher, scholar, or professional.</p>
+</section>
+
+<!-- Research Paper -->
+<section id="research">
+  <h2>Research Paper</h2>
+  <p>Include your research paper here, articulating the problem or issue you are addressing and including supporting evidence.</p>
+</section>
+
+<!-- Supporting Evidence -->
+<section id="evidence">
+  <h2>Supporting Evidence</h2>
+  <p>Include at least one piece of supporting evidence (a survey, fieldwork observation, or interview) that is appropriate for your research project and communicates or supports your thesis and argument.</p>
+</section>
+
+<!-- Conclusion -->
+<section id="conclusion">
+  <h2>Conclusion</h2>
+  <p>Write a conclusion that addresses the relevance of your project to other people who might be connected or interested in your issue.</p>
+</section>
+
+<!-- Reflection -->
+<section id="reflection">
+  <h2>Reflective Essay</h2>
+  <p>Write a critical, reflective essay that addresses your development as a researcher and student in your RC.</p>
+</section>
+
+<!-- References -->
+<section id="references">
+  <h2>References</h2>
+  <p>List your sources here in a works cited or references format, allowing your reader to learn more about your issue if they wish.</p>
+</section>
+
+ <script src="animations.js"></script>
+</body>
+</html>
