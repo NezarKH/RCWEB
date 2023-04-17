@@ -1,24 +1,24 @@
-Research Project: 
+
+**Research Project:**
 The Authentic Self - An Exploration of Gender in a Broader Social Context
 This research project aims to explore the characteristics of individuation and the context behind what defines someone's gender expression. It delves into factors that are broad and dependent on the experience of the authentic self, drawing evidence from literature and surveys, and analyzing responses from a college demographic.
 
-Project Overview
-The project includes the following components:
+**Project Overview**
+1. The project includes the following components:
 
-An exploration of the concept of individuation and its relationship with gender expression.
+2. An exploration of the concept of individuation and its relationship with gender expression.
 
-A review of relevant literature and previous research.
+3. A review of relevant literature and previous research.
 
-Design and implementation of two surveys.
+4. Design and implementation of two surveys.
 
-Analysis of survey data using quantitative and qualitative methods.
+5. Analysis of survey data using quantitative and qualitative methods.
 
 Discussion of the implications of the findings for understanding gender expression.
 
 Repository Structure
 
 <pre>
-.
 ├── README.md               # This README file
 ├── index.html              # The main HTML file for the website
 ├── about.html              # About page HTML file
@@ -32,22 +32,25 @@ Repository Structure
 └── smoothscroll.js         # JavaScript file for smooth scrolling
 </pre>
 
-Usage
+**Usage**
 To view the project locally, clone the repository and open index.html in your browser.
 
+<pre>
 git clone https://github.com//NezarKH/RCWEB.git
 cd /NezarKH/RCWEB
 open index.html
+<pre>
 
-Contributing
+**Contributing**
 If you'd like to contribute to this project, please submit a pull request with your proposed changes.
 
-Fork the repository.
-Create a new branch with a descriptive name, such as feature/new-survey-question.
-Make your changes in the new branch.
-Commit your changes and push the branch to your fork.
-Submit a pull request, providing a detailed description of your proposed changes.
-License
+1. Fork the repository.
+2. Create a new branch with a descriptive name, such as feature/new-survey-question.
+3. Make your changes in the new branch.
+4. Commit your changes and push the branch to your fork.
+5. Submit a pull request, providing a detailed description of your proposed changes.
+
+**License**
 This project is licensed under the MIT License.
 
 
