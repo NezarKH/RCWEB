@@ -17,6 +17,8 @@ Discussion of the implications of the findings for understanding gender expressi
 
 Repository Structure
 
+<pre>
+
 ├── README.md               # This README file
 ├── index.html              # The main HTML file for the website
 ├── about.html              # About page HTML file
@@ -28,6 +30,8 @@ Repository Structure
 ├── styles.css              # Styles for the website
 ├── animations.js           # JavaScript file for animations
 └── smoothscroll.js         # JavaScript file for smooth scrolling
+
+<pre>
 
 Usage
 To view the project locally, clone the repository and open index.html in your browser.
