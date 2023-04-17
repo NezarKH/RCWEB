@@ -39,7 +39,7 @@ To view the project locally, clone the repository and open index.html in your br
 git clone https://github.com//NezarKH/RCWEB.git
 cd /NezarKH/RCWEB
 open index.html
-<pre>
+</pre>
 
 **Contributing**
 If you'd like to contribute to this project, please submit a pull request with your proposed changes.
