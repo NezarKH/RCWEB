@@ -28,8 +28,8 @@ Repository Structure
 ├── reflection.html         # Reflective Essay page HTML file
 ├── references.html         # References page HTML file
 ├── styles.css              # Styles for the website
-├── animations.js           # JavaScript file for animations
-└── smoothscroll.js         # JavaScript file for smooth scrolling
+└──animations.js           # JavaScript file for animations
+
 </pre>
 
 **Usage**
