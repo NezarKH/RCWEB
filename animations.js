@@ -1,23 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const navLinks = document.querySelectorAll('nav ul li a');
+  const sections = document.querySelectorAll('section');
 
-  navLinks.forEach((link) => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const target = event.target;
+  sections.forEach((section, index) => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(50px)';
+    section.style.transition = 'opacity 1s, transform 1s';
+    section.style.transitionDelay = `${index * 200}ms`;
+  });
 
-      // Add animation class
-      target.classList.add('animate');
-
-      // Remove animation class after 300ms
-      setTimeout(() => {
-        target.classList.remove('animate');
-      }, 300);
-
-      // Navigate to the target page after the animation
-      setTimeout(() => {
-        window.location.href = target.href;
-      }, 300);
+  window.addEventListener('load', () => {
+    sections.forEach((section) => {
+      section.style.opacity = '1';
+      section.style.transform = 'translateY(0)';
     });
   });
 });
+
