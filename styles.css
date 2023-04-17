@@ -82,6 +82,32 @@ section p {
 section p:last-child {
   margin-bottom: 0;
 }
+#feedback {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#feedback-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#feedback-form input,
+#feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#feedback-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
 
 @media screen and (max-width: 768px) {
   nav ul {
