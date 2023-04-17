@@ -100,8 +100,9 @@
     
     emailjs.send('service_gyq9edc', 'template_wp8dzzg', {
       from_name: name,
-      user_email: email,
-      message: message
+      to_name: email,
+      message: message,
+      reply_to: email,
     }).then(function() {
       alert('Feedback sent successfully!');
     }, function(error) {
