@@ -34,24 +34,6 @@
   <p>Provide background information about you as a researcher, scholar, or professional.</p>
 </section>
  
- <!-- Feedback Form -->
-<section id="feedback">
-  <h2>Feedback Form</h2>
-  <form id="feedback-form">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" required></textarea>
-    
-    <input type="submit" value="Submit Feedback">
-  </form>
-</section>
-
-
 <!-- Research Paper -->
 <section id="research">
   <h2>Research Paper</h2>
@@ -82,9 +64,27 @@
   <p>List your sources here in a works cited or references format, allowing your reader to learn more about your issue if they wish.</p>
 </section>
  
-
- <script src="animations.js"></script> 
+ <!-- Feedback Form -->
+<section id="feedback">
+  <h2>Feedback Form</h2>
+  <form id="feedback-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+    
+    <input type="submit" value="Submit Feedback">
+  </form>
+</section>
  
+   <!-- For load in animations  -->
+ <script src="animations.js"></script>
+ 
+  <!-- Email.js Impl, for feedback  -->
  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
 <script>
   (function() {
