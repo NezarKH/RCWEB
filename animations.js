@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('nav a');
   const sections = document.querySelectorAll('section');
+
+  navLinks.forEach((link) => {
+    link.addEventListener('mouseover', () => {
+      link.classList.add('animate');
+    });
+    link.addEventListener('mouseout', () => {
+      link.classList.remove('animate');
+    });
+  });
 
   sections.forEach((section, index) => {
     section.style.opacity = '0';
@@ -15,4 +25,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
 
