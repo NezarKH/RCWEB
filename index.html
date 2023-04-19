@@ -1,13 +1,34 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>index</title>
+  <style>
+    .full-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+    .full-image img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+    }
+  </style>
 </head>
- <body>
-   <div class="fullscreen-image"></div>
+<body>
+  <div class="fullscreen-image" id="backgroundImage"></div>
+  <div class="full-image" id="fullImage">
+    <img src="your-background-image.jpg" alt="Background Image">
+  </div>
   <header>
     <nav>
       <ul>
@@ -100,6 +121,16 @@
     <input type="submit" value="Submit Feedback">
   </form>
 </section>
+ 
+ <script>
+    document.getElementById('backgroundImage').addEventListener('click', function () {
+      document.getElementById('fullImage').style.display = 'flex';
+    });
+
+    document.getElementById('fullImage').addEventListener('click', function () {
+      document.getElementById('fullImage').style.display = 'none';
+    });
+  </script>
  
    <!-- For load in animations  -->
  <script src="animations.js"></script>
