@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     section.style.opacity = '0';
     section.style.transform = 'translateY(50px)';
     section.style.transition = 'opacity 1s, transform 1s';
-    section.style.transitionDelay = `${index * 200}ms`;
+    section.style.transitionDelay = `${index * 350}ms`;
   });
 
   window.addEventListener('load', () => {
