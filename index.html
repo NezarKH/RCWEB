@@ -49,11 +49,7 @@
   <h1>Welcome to My Research Project</h1>
   <p>The authentic self, an exploration of gender in a broader social context. .</p>
 </section>
-  <!-- Search Bar -->
-<div class="search-container">
-  <input type="text" id="search-input" class="search-input" placeholder="Search..." onkeyup="searchFunction()" />
-</div>
-
+  
 <!-- Search Results -->
 <div class="search-results" id="search-results" style="display: none;">
   <h3>Search Results:</h3>
@@ -116,54 +112,6 @@
   </p>
 </section>
   
-   <script src="searchData.js"></script>
-  <script>
-    // Add the search functionality script here
-    let searchIndex;
-
-    function createIndex() {
-      searchIndex = lunr(function () {
-        this.ref('id');
-        this.field('title');
-        this.field('content');
-
-        documents.forEach(function (doc) {
-          this.add(doc);
-        }, this);
-      });
-    }
-
-    createIndex();
-
-    function search(query) {
-      const results = searchIndex.search(query);
-      displayResults(results);
-    }
-
-    document.getElementById('search-input').addEventListener('input', (e) => {
-      search(e.target.value);
-    });
-
-    function displayResults(results) {
-      const resultsContainer = document.getElementById('search-results');
-      resultsContainer.innerHTML = '';
-
-      if (results.length === 0) {
-        resultsContainer.innerHTML = '<p>No results found.</p>';
-        return;
-      }
-
-      results.forEach((result) => {
-        const doc = documents.find((doc) => doc.id === parseInt(result.ref));
-        const resultElement = document.createElement('div');
-        resultElement.innerHTML = `
-          <h3>${doc.title}</h3>
-          <p>${doc.content.slice(0, 150)}...</p>
-        `;
-        resultsContainer.appendChild(resultElement);
-      });
-    }
-  </script>
  
  <!-- Feedback Form -->
 <section id="feedback">
