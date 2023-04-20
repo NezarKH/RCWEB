@@ -188,6 +188,10 @@ section p:last-child {
   color: #4b8cde;
 }
 
+.hide {
+  display: none;
+}
+
 
 @media screen and (max-width: 768px) {
   nav ul {
