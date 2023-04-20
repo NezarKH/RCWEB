@@ -23,18 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
   loading.style.display = 'block';
   document.getElementById('search-container').classList.add('hide');
 
-  window.addEventListener('load', () => {
+  setTimeout(() => {
+    loading.style.opacity = '0';
     setTimeout(() => {
-      loading.style.opacity = '0';
-      setTimeout(() => {
-        loading.style.display = 'none';
-        document.getElementById('search-container').classList.remove('hide');
-        sections.forEach((section) => {
-          section.style.opacity = '1';
-          section.style.transform = 'translateY(0px)';
-        });
-      }, 1000);
-    }, 2000);
-  });
+      loading.style.display = 'none';
+      document.getElementById('search-container').classList.remove('hide');
+      sections.forEach((section) => {
+        section.style.opacity = '1';
+        section.style.transform = 'translateY(0px)';
+      });
+    }, 1000);
+  }, 2000);
 });
+
 
