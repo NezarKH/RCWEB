@@ -19,19 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   window.addEventListener('load', () => {
-    const loading = document.getElementById('loading');
     setTimeout(() => {
-      loading.style.opacity = '0';
-      setTimeout(() => {
-        loading.style.display = 'none';
-        document.getElementById('search-container').classList.remove('hide');
-
-        sections.forEach((section) => {
-          section.style.opacity = '1';
-          section.style.transform = 'translateY(0px)';
-        });
-      }, 1000);
-    }, 2000);
+      sections.forEach((section) => {
+        section.style.opacity = '1';
+        section.style.transform = 'translateY(0px)';
+      });
+    }, 500);
   });
 });
+
 
