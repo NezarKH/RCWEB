@@ -50,8 +50,11 @@
   <p>The authentic self, an exploration of gender in a broader social context. .</p>
 </section>
   <!-- Search Bar -->
-<div class="search-container">
-  <input type="text" id="search-input" class="search-input" placeholder="Search..." onkeyup="searchFunction()" />
+<div id="search-container" class="hide">
+  <input type="text" id="search-input" oninput="searchFunction()" placeholder="Search...">
+  <div id="search-results">
+    <ul id="search-results-list"></ul>
+  </div>
 </div>
 
 <!-- Search Results -->
