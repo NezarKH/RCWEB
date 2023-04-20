@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>index</title>
-   <style>
+  <style>
     .full-image {
       position: fixed;
       top: 0;
@@ -43,17 +43,15 @@
     </nav>
   </header>
 
+
 <!-- index -->
 <section id="index">
   <h1>Welcome to My Research Project</h1>
   <p>The authentic self, an exploration of gender in a broader social context. .</p>
 </section>
   <!-- Search Bar -->
-<div id="search-container" class="hide">
-  <input type="text" id="search-input" oninput="searchFunction()" placeholder="Search...">
-  <div id="search-results">
-    <ul id="search-results-list"></ul>
-  </div>
+<div class="search-container">
+  <input type="text" id="search-input" class="search-input" placeholder="Search..." onkeyup="searchFunction()" />
 </div>
 
 <!-- Search Results -->
@@ -118,30 +116,73 @@
   </p>
 </section>
   
-<!-- Search Bar -->
-  <div id="search-container" class="hide">
-    <input type="text" id="search-input" oninput="searchFunction()" placeholder="Search...">
-    <div id="search-results">
-      <ul id="search-results-list"></ul>
-    </div>
-  </div>
-
-  <!-- Search Results -->
-  <div class="search-results" id="search-results" style="display: none;">
-    <h3>Search Results:</h3>
-    <ul id="search-results-list"></ul>
-  </div>
-
-  <!-- Content sections... -->
-
- <script src="searchdata.js"></script>
-  <script src="animations.js"></script>
-  <script src="search.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+   <script src="searchData.js"></script>
   <script>
-    // Add your other scripts here
+    // Add the search functionality script here
+    let searchIndex;
 
-    // For the full image display
+    function createIndex() {
+      searchIndex = lunr(function () {
+        this.ref('id');
+        this.field('title');
+        this.field('content');
+
+        documents.forEach(function (doc) {
+          this.add(doc);
+        }, this);
+      });
+    }
+
+    createIndex();
+
+    function search(query) {
+      const results = searchIndex.search(query);
+      displayResults(results);
+    }
+
+    document.getElementById('search-input').addEventListener('input', (e) => {
+      search(e.target.value);
+    });
+
+    function displayResults(results) {
+      const resultsContainer = document.getElementById('search-results');
+      resultsContainer.innerHTML = '';
+
+      if (results.length === 0) {
+        resultsContainer.innerHTML = '<p>No results found.</p>';
+        return;
+      }
+
+      results.forEach((result) => {
+        const doc = documents.find((doc) => doc.id === parseInt(result.ref));
+        const resultElement = document.createElement('div');
+        resultElement.innerHTML = `
+          <h3>${doc.title}</h3>
+          <p>${doc.content.slice(0, 150)}...</p>
+        `;
+        resultsContainer.appendChild(resultElement);
+      });
+    }
+  </script>
+ 
+ <!-- Feedback Form -->
+<section id="feedback">
+  <h2>Feedback Form</h2>
+  <form id="feedback-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+    
+    <input type="submit" value="Submit Feedback">
+  </form>
+</section>
+ 
+ <script>
     document.getElementById('backgroundImage').addEventListener('click', function () {
       document.getElementById('fullImage').style.display = 'flex';
     });
@@ -149,31 +190,37 @@
     document.getElementById('fullImage').addEventListener('click', function () {
       document.getElementById('fullImage').style.display = 'none';
     });
-
-    // For email.js
-    (function() {
-      emailjs.init("Y7Q6fE8zaNVXMPmAM");
-    })();
-    
-    document.getElementById('feedback-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      
-      var name = document.getElementById('name').value;
-      var email = document.getElementById('email').value;
-      var message = document.getElementById('message').value;
-      
-      emailjs.send('service_gyq9edc', 'template_wp8dzzg', {
-        from_name: name,
-        from_email: email,
-        message: message,
-      }).then(function() {
-        alert('Feedback sent successfully!');
-      }, function(error) {
-        alert('Failed to send feedback:\n' + JSON.stringify(error));
-      });
-    });
   </script>
+ 
+   <!-- For load in animations  -->
+ <script src="animations.js"></script>
+ 
+  <!-- Email.js Impl, for feedback  -->
+ <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("Y7Q6fE8zaNVXMPmAM");
+  })();
+  
+  document.getElementById('feedback-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    
+    emailjs.send('service_gyq9edc', 'template_wp8dzzg', {
+      from_name: name,
+      from_email: email,
+      message: message,
+    }).then(function() {
+      alert('Feedback sent successfully!');
+    }, function(error) {
+      alert('Failed to send feedback:\n' + JSON.stringify(error));
+    });
+  });
+</script>
+ 
 
 </body>
 </html>
-
