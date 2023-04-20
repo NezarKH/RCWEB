@@ -50,11 +50,13 @@ function searchFunction() {
   });
 
   window.addEventListener('load', () => {
-    sections.forEach((section) => {
-      section.style.opacity = '1';
-      section.style.transform = 'translateY(0)';
-    });
-  });
+  const loading = document.getElementById('loading');
+  setTimeout(() => {
+    loading.style.opacity = '0';
+    setTimeout(() => {
+      loading.style.display = 'none';
+      document.getElementById('search-container').classList.remove('hide');
+    }, 1000);
+  }, 2000);
 });
-
 
