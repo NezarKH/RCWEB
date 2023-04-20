@@ -10,6 +10,26 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.remove('animate');
     });
   });
+
+  sections.forEach((section, index) => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(50px)';
+    section.style.transition = 'opacity 1s, transform 1s';
+    section.style.transitionDelay = `${index * 200}ms`;
+  });
+
+  window.addEventListener('load', () => {
+    const loading = document.getElementById('loading');
+    setTimeout(() => {
+      loading.style.opacity = '0';
+      setTimeout(() => {
+        loading.style.display = 'none';
+        document.getElementById('search-container').classList.remove('hide');
+      }, 1000);
+    }, 2000);
+  });
+});
+
 function searchFunction() {
   const input = document.getElementById('search-input');
   const filter = input.value.toLowerCase();
@@ -41,22 +61,4 @@ function searchFunction() {
     searchResults.style.display = 'none';
   }
 }
-
-  sections.forEach((section, index) => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(50px)';
-    section.style.transition = 'opacity 1s, transform 1s';
-    section.style.transitionDelay = `${index * 200}ms`;
-  });
-
-  window.addEventListener('load', () => {
-  const loading = document.getElementById('loading');
-  setTimeout(() => {
-    loading.style.opacity = '0';
-    setTimeout(() => {
-      loading.style.display = 'none';
-      document.getElementById('search-container').classList.remove('hide');
-    }, 1000);
-  }, 2000);
-});
 
