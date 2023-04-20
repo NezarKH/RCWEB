@@ -29,3 +29,4 @@ function searchFunction() {
     searchResults.style.display = 'none';
   }
 }
+
