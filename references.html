@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,7 +10,6 @@
         background-color: #f5f5f5;
         text-align: center;
         padding: 50px;
-        overflow: hidden;
     }
 
     h1 {
@@ -29,6 +28,10 @@
 
     .highlight {
         color: #e74c3c;
+    }
+
+    .iframe-container {
+        overflow: hidden;
     }
 </style>
 
@@ -52,11 +55,11 @@
   <main>
     <section id="index">
       <h1>Welcome to Your Project</h1>
-      <iframe src="https://docs.google.com/document/d/1L2T1vFpP1wMb27NE63St8_bCSVthteWpMx7hbiRjg5I/preview" width="100%" height="600px" style="border: none;">
-  <p>It appears you don't have a PDF plugin for this browser. No problem, you can <a href="https://docs.google.com/document/d/1L2T1vFpP1wMb27NE63St8_bCSVthteWpMx7hbiRjg5I/edit?usp=sharing">click here to download the PDF file.</a></p>
-</iframe>
-
-
+      <div class="iframe-container">
+          <iframe src="https://docs.google.com/document/d/1L2T1vFpP1wMb27NE63St8_bCSVthteWpMx7hbiRjg5I/preview" width="100%" height="600px" style="border: none;">
+            <p>It appears you don't have a PDF plugin for this browser. No problem, you can <a href="https://docs.google.com/document/d/1L2T1vFpP1wMb27NE63St8_bCSVthteWpMx7hbiRjg5I/edit?usp=sharing">click here to download the PDF file.</a></p>
+          </iframe>
+      </div>
     </section>
   </main>
  <script src="animations.js"></script>
