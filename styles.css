@@ -130,63 +130,6 @@ section p:last-child {
   z-index: -1;
 }
 
-/* Search Bar */
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.search-input {
-  width: 50%;
-  padding: 12px 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.search-input:focus {
-  outline: none;
-  border-color: #4b8cde;
-  box-shadow: 0 0 10px #4b8cde;
-}
-
-.search-results {
-  max-width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f1f1f1;
-  border-radius: 4px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.search-results h3 {
-  margin: 0 0 10px;
-}
-
-.search-results ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.search-results li {
-  padding: 10px 0;
-  border-bottom: 1px solid #ccc;
-}
-
-.search-results li:last-child {
-  border-bottom: none;
-}
-
-.search-results a {
-  text-decoration: none;
-  color: #333;
-}
-
-.search-results a:hover {
-  color: #4b8cde;
-}
 
 
 @media screen and (max-width: 768px) {
