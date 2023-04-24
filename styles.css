@@ -7,7 +7,7 @@
 
 /* Basic styling */
 body {
-  font-family: "Times New Roman", serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
@@ -28,6 +28,7 @@ nav ul {
 nav a {
   color: #fff;
   text-decoration: none;
+  font-weight: 600;
 }
 
 nav ul li a.animate {
@@ -40,7 +41,7 @@ section {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #333;
 }
 
@@ -57,10 +58,11 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: #007bff;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #444;
   margin-bottom: 1rem;
 }
@@ -69,7 +71,7 @@ section {
   background-color: #fff;
   margin-bottom: 2rem;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 section:last-child {
@@ -99,10 +101,10 @@ section p:last-child {
 #feedback-form input,
 #feedback-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 #feedback-form textarea {
@@ -115,6 +117,7 @@ section p:last-child {
   height: auto;
   border-radius: 50%;
   margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .fullscreen-image {
@@ -130,13 +133,13 @@ section p:last-child {
   z-index: -1;
 }
 
-
-
 @media screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
+    padding: 0.5rem;
   }
 }
+
 
 
 
